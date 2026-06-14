@@ -5,17 +5,17 @@ export const personalInfo = {
     "Ürün Lideri (Product Lead)",
     "YBS & CBS Uzmanı",
   ],
-  bio: "Yapay zeka sistem tasarımı, veri mühendisliği, fintech ve CBS analitiği alanlarında 1 yılı aşkın deneyim. Hibrit LLM mimarileri ve büyük veri setleri ile bankacılık düzeyinde ürünler geliştiriyor, mobil girişimlere liderlik ediyorum.",
+  bio: "Yapay zeka sistem tasarımı, veri mühendisliği, Vibe Coding ile 3 yılı aşkın deneyim. Hibrit LLM mimarileri ve büyük veri setleri ile bankacılık düzeyinde ürünler geliştiriyor, mobil girişimlere liderlik ediyorum.",
   email: "erennzden@gmail.com",
   linkedin: "https://www.linkedin.com/in/erennzden",
   github: "https://github.com/erennzden",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "C:/Users/eren/Downloads/Mehmet_Eren_Ozden_CV_TR.pdf",
 };
 
 export const education = [
   {
     id: 1,
-    type: "lisans",
+    type: "Lisans",
     school: "Dokuz Eylül Üniversitesi",
     department: "Yönetim Bilişim Sistemleri (YBS)",
     gpa: "3.14 / 4.00",
@@ -24,7 +24,7 @@ export const education = [
   },
   {
     id: 2,
-    type: "onlisans",
+    type: "Önlisans",
     school: "Anadolu Üniversitesi",
     department: "Coğrafi Bilgi Sistemleri (CBS)",
     gpa: "2.85 / 4.00",
@@ -33,13 +33,13 @@ export const education = [
   },
   {
     id: 3,
-    type: "akademi",
+    type: "Akademi",
     school: "Marmara Üniversitesi",
     subtitle: "ODTÜ, İTÜ, Boğaziçi Koordinasyonu",
-    department: "Veri Analizi Akademisi",
+    department: "Veri Analizi Okulu",
     date: "Eki 2025 - May 2026",
     icon: "📊",
-    tags: ["Yapay Zeka", "Makine Öğrenmesi", "Hesaplamalı Sosyal Bilimler"],
+    tags: ["Yapay Zeka ve Makine Öğrenmesi", "Hesaplamalı Sosyal Bilimler"],
   },
 ];
 
@@ -82,9 +82,9 @@ export const experience = [
   {
     id: 2,
     company: "Kuveyt Türk Katılım Bankası",
-    position: "Kampüs Bankacılığı Satış Stajyeri",
+    position: "Bankada Kampüs Satış Stajyeri",
     date: "Tem 2025 - Oca 2026",
-    detail: "Üstün inisiyatif ve başarı sebebiyle terfi.",
+    detail: "Üstün inisiyatif ve başarı ile banka bünyesinde terfi.",
     icon: "🏦",
   },
   {
@@ -144,7 +144,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Fırın & Muhasebe Ekosistemi",
+    title: "Fırın İşletmesi için Karar Destek Sistemi ve Anında Muhasebe Ekosistemi",
     subtitle: "Yerel İşletme Otomasyonu",
     description:
       "Operasyonel iş akışlarını optimize eden çift katmanlı yerel işletme otomasyonu.",
