@@ -39,31 +39,27 @@ export default function Navbar() {
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-[var(--color-background)]/80 backdrop-blur-xl border-b border-[var(--color-border)]"
-            : "bg-transparent"
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-slate-900/75 backdrop-blur-md border-b border-slate-800/80 flex justify-center"
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+        <div className="w-full max-w-6xl px-6">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a
               href="#hero"
               onClick={(e) => handleClick(e, "#hero")}
-              className="text-xl font-bold gradient-text tracking-tight"
+              className="text-2xl font-extrabold tracking-wider gradient-text hover:opacity-90 transition-opacity"
             >
               MEÖ
             </a>
 
             {/* Desktop Links */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleClick(e, link.href)}
-                  className="px-4 py-2 text-sm text-[var(--color-muted)] hover:text-white rounded-lg hover:bg-white/5 transition-all duration-300"
+                  className="px-4 py-2 text-sm font-medium text-slate-400 hover:text-slate-100 rounded-lg hover:bg-slate-800/50 transition-all duration-300"
                 >
                   {link.label}
                 </a>
@@ -73,7 +69,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden text-[var(--color-muted)] hover:text-white transition-colors p-2"
+              className="md:hidden text-slate-400 hover:text-slate-100 transition-colors p-2"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
@@ -90,7 +86,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[var(--color-background)]/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full gap-6">
               {navLinks.map((link, i) => (
@@ -101,7 +97,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
-                  className="text-2xl font-medium text-[var(--color-muted)] hover:text-white transition-colors"
+                  className="text-2xl font-medium text-slate-400 hover:text-slate-100 transition-colors"
                 >
                   {link.label}
                 </motion.a>

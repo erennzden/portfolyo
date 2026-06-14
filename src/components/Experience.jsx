@@ -6,84 +6,63 @@ import { experience } from "@/data/content";
 
 export default function Experience() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section className="w-full py-32 px-6 lg:px-8 flex flex-col items-center">
+      <div className="w-full max-w-3xl">
         <SectionHeading
           id="experience"
           title="İş Deneyimi"
           subtitle="Profesyonel kariyer yolculuğum"
         />
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="timeline-line" />
+        <div className="flex flex-col gap-10">
+          {experience.map((item, index) => (
+            <motion.div
+              key={item.id}
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              {/* Icon / Timeline Dot */}
+              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-slate-800 border-2 border-blue-400 z-10 text-2xl shadow-lg shadow-blue-500/10 mb-[-1rem] relative">
+                {item.icon}
+              </div>
 
-          <div className="space-y-12">
-            {experience.map((item, index) => {
-              const isLeft = index % 2 === 0;
+              {/* Content Card */}
+              <div className="w-full card-glow p-8 pt-10 group hover:-translate-y-1.5 transition-all duration-300 border border-slate-800 bg-slate-800/40 flex flex-col items-center text-center">
+                {/* Current badge */}
+                {item.current && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-teal-400 bg-teal-400/10 rounded-full mb-4 border border-teal-400/20 mt-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse" />
+                    Aktif
+                  </span>
+                )}
 
-              return (
-                <motion.div
-                  key={item.id}
-                  className={`relative flex items-center ${
-                    isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                  } flex-row`}
-                  initial={{ opacity: 0, x: isLeft ? -60 : 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  {/* Content Card */}
-                  <div
-                    className={`w-full md:w-[calc(50%-2rem)] ml-12 md:ml-0 ${
-                      isLeft ? "md:pr-12" : "md:pl-12"
-                    }`}
-                  >
-                    <div className="card-glow p-6 group hover:-translate-y-1 transition-transform duration-300">
-                      {/* Current badge */}
-                      {item.current && (
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold text-[var(--color-accent-green)] bg-[var(--color-accent-green)]/10 rounded-full mb-3 border border-[var(--color-accent-green)]/20">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent-green)] animate-pulse" />
-                          Aktif
-                        </span>
-                      )}
+                {/* Company */}
+                <h3 className="text-xl font-bold text-slate-100 group-hover:text-blue-300 transition-colors mb-1">
+                  {item.company}
+                </h3>
 
-                      {/* Company */}
-                      <h3 className="text-lg font-bold text-white group-hover:text-[var(--color-accent-light)] transition-colors mb-1">
-                        {item.company}
-                      </h3>
+                {/* Position */}
+                <p className="text-blue-400 text-sm font-medium mb-3">
+                  {item.position}
+                </p>
 
-                      {/* Position */}
-                      <p className="text-[var(--color-accent-light)] text-sm font-medium mb-2">
-                        {item.position}
-                      </p>
+                {/* Date */}
+                <p className="text-sm text-slate-400 mb-4 flex items-center justify-center gap-1.5">
+                  <span>📅</span> {item.date}
+                </p>
 
-                      {/* Date */}
-                      <p className="text-xs text-[var(--color-muted)]/70 mb-3">
-                        📅 {item.date}
-                      </p>
-
-                      {/* Detail */}
-                      {item.detail && (
-                        <p className="text-sm text-[var(--color-muted)] leading-relaxed">
-                          {item.detail}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Timeline Dot */}
-                  <div className="absolute left-5 md:left-1/2 md:-translate-x-1/2 w-10 h-10 flex items-center justify-center rounded-full bg-[var(--color-card)] border-2 border-[var(--color-accent)] z-10 text-lg shadow-lg shadow-[var(--color-accent)]/20">
-                    {item.icon}
-                  </div>
-
-                  {/* Empty space for other side */}
-                  <div className="hidden md:block md:w-[calc(50%-2rem)]" />
-                </motion.div>
-              );
-            })}
-          </div>
+                {/* Detail */}
+                {item.detail && (
+                  <p className="text-base text-slate-400 leading-relaxed font-light">
+                    {item.detail}
+                  </p>
+                )}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

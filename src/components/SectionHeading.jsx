@@ -12,15 +12,15 @@ export default function SectionHeading({ title, subtitle, id }) {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="text-3xl sm:text-4xl font-bold gradient-text inline-block mb-3">
+      <h2 className="text-3xl sm:text-4xl font-bold text-slate-100 inline-block mb-3">
         {title}
       </h2>
       {subtitle && (
-        <p className="text-[var(--color-muted)] text-lg max-w-2xl mx-auto">
+        <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
           {subtitle}
         </p>
       )}
-      <div className="mt-4 mx-auto w-24 h-1 rounded-full bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-green)]" />
+      <div className="mt-4 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-blue-400/40 to-teal-400/40" />
     </motion.div>
   );
 }

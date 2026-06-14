@@ -86,7 +86,7 @@ export default function Hero() {
         {/* Greeting */}
         <motion.p
           variants={itemVariants}
-          className="text-[var(--color-accent-light)] text-lg sm:text-xl font-medium mb-4 tracking-wide"
+          className="text-blue-300 text-lg sm:text-xl font-medium mb-6 tracking-wide"
         >
           Merhaba, Ben
         </motion.p>
@@ -94,7 +94,7 @@ export default function Hero() {
         {/* Name */}
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-6 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-8 tracking-tight"
         >
           <span className="gradient-text">{personalInfo.name}</span>
         </motion.h1>
@@ -102,7 +102,7 @@ export default function Hero() {
         {/* Typing Effect */}
         <motion.div
           variants={itemVariants}
-          className="h-10 sm:h-12 flex items-center justify-center mb-8"
+          className="h-10 sm:h-12 flex items-center justify-center mb-10"
         >
           <span className="text-lg sm:text-2xl text-[var(--color-muted)] font-light">
             {displayText}
@@ -113,7 +113,7 @@ export default function Hero() {
         {/* Bio */}
         <motion.p
           variants={itemVariants}
-          className="text-[var(--color-muted)] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10"
+          className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-loose mb-14"
         >
           {personalInfo.bio}
         </motion.p>
@@ -121,7 +121,7 @@ export default function Hero() {
         {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
+          className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16"
         >
           <a
             href="#projects"
@@ -129,7 +129,7 @@ export default function Hero() {
               e.preventDefault();
               document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="group flex items-center gap-2 px-7 py-3.5 bg-[var(--color-accent)] hover:bg-[var(--color-accent-light)] text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-[var(--color-accent)]/25 hover:shadow-[var(--color-accent)]/40"
+            className="group flex items-center gap-2 px-8 py-4 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/35"
           >
             <HiArrowDown className="group-hover:translate-y-1 transition-transform" />
             Projelerimi İncele
@@ -138,14 +138,14 @@ export default function Hero() {
             href={personalInfo.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-7 py-3.5 border border-[var(--color-border)] hover:border-[var(--color-accent)]/50 text-[var(--color-foreground)] font-semibold rounded-xl transition-all duration-300 hover:bg-white/5"
+            className="flex items-center gap-2 px-8 py-4 border border-slate-700 text-slate-100 hover:text-white font-semibold rounded-xl transition-all duration-300 hover:bg-slate-800/40 hover:border-slate-500"
           >
             <HiDownload />
             Özgeçmişi İndir
           </a>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="flex items-center gap-2 px-7 py-3.5 border border-[var(--color-border)] hover:border-[var(--color-accent-green)]/50 text-[var(--color-foreground)] font-semibold rounded-xl transition-all duration-300 hover:bg-white/5"
+            className="flex items-center gap-2 px-8 py-4 border border-slate-700 text-slate-100 hover:text-white font-semibold rounded-xl transition-all duration-300 hover:bg-slate-800/40 hover:border-slate-500"
           >
             <HiMail />
             İletişime Geç
@@ -155,13 +155,13 @@ export default function Hero() {
         {/* Social Links */}
         <motion.div
           variants={itemVariants}
-          className="flex items-center justify-center gap-4"
+          className="flex items-center justify-center gap-5"
         >
           <a
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-xl border border-[var(--color-border)] text-[var(--color-muted)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)]/50 transition-all duration-300 hover:bg-white/5"
+            className="p-3.5 rounded-xl border border-slate-700 text-slate-400 hover:text-blue-400 hover:border-blue-400/50 transition-all duration-300 hover:bg-slate-800/40"
             aria-label="LinkedIn"
           >
             <FaLinkedinIn size={20} />
@@ -170,7 +170,7 @@ export default function Hero() {
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-xl border border-[var(--color-border)] text-[var(--color-muted)] hover:text-white hover:border-white/30 transition-all duration-300 hover:bg-white/5"
+            className="p-3.5 rounded-xl border border-slate-700 text-slate-400 hover:text-slate-100 hover:border-slate-500 transition-all duration-300 hover:bg-slate-800/40"
             aria-label="GitHub"
           >
             <FaGithub size={20} />
